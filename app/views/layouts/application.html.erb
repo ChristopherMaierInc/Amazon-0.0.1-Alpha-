@@ -7,8 +7,25 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+    <header>
+      <!-- Logo -->
+      <%= link_to image_tag('amazon_logo.png', :alt => "Amazon Logo PNG", :class => "logo"), root_path %>
+       <!-- /Logo -->
+
+       <!-- Nav Toggle -->
+       <div id="nav-toggle">MENU</div>
+       <!-- /Nav Toggle -->
+
+       <!-- Navigation -->
+       <ul class="nav">
+         <li><a href="javascript:void(0);"><a href="books">BOOKS</a></li>
+         <li><a href="javascript:void(0);"><a href="authors">AUTHORS</a></li>
+       </ul>
+       <!-- /Navigation -->
+
+     </header>
+
     <%= yield %>
   </body>
 </html>
