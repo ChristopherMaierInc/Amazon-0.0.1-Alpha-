@@ -1,7 +1,11 @@
 <br><br>
-<h1>BOOKS!</h1>
+<h1>BOOKS!</h1><br><br>
 
 <%= @books.each do |book| %>
+
+<p>
+  <%= image_tag book.image_url, size:"200x300" %>
+</p>
 
 <p>
   <strong>Title:</strong>
@@ -10,12 +14,12 @@
 
 <p>
   <strong>Author:</strong>
-  <%= book.Author_id %>
+  <%= book.auth_full_name %>
 </p>
 
 <p>
   <strong>Price:</strong>
-  <%= book.price %>
+  $<%= book.price %>
 </p>
 
 <p>
@@ -27,9 +31,7 @@
   <strong>Number of Pages:</strong>
   <%= book.number_of_pages %>
 </p>
-
-<p>
-  <%= image_tag book.image_url, size:"200x300" %>
-</p>
-
+<br>
+<hr>
+<br>
 <% end %>

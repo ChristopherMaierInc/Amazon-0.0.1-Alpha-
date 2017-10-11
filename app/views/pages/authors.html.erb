@@ -1,2 +1,22 @@
-<h1>Pages#authors</h1>
-<p>Find me in app/views/pages/authors.html.erb</p>
+<br><br>
+<h1>AUTHORS!</h1><br><br>
+
+<%= @authors.each do |author| %>
+
+<p>
+  <%= image_tag author.image_url, size:"250x300" %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= "#{author.first_name} #{author.last_name}" %>
+</p>
+
+<p>
+  <strong>D.O.B:</strong>
+  <%= author.DOB %>
+</p>
+<br>
+<hr>
+<br>
+<% end %>

@@ -26,11 +26,11 @@ ActiveRecord::Schema.define(version: 20171010023246) do
     t.string "price"
     t.string "isbn"
     t.integer "number_of_pages"
-    t.integer "Author_id"
+    t.integer "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image_url"
-    t.index ["Author_id"], name: "index_books_on_Author_id"
+    t.index ["author_id"], name: "index_books_on_author_id"
   end
 
 end
