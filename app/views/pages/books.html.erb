@@ -1,0 +1,35 @@
+<br><br>
+<h1>BOOKS!</h1>
+
+<%= @books.each do |book| %>
+
+<p>
+  <strong>Title:</strong>
+  <%= book.title %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= book.Author_id %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= book.price %>
+</p>
+
+<p>
+  <strong>ISBN:</strong>
+  <%= book.isbn %>
+</p>
+
+<p>
+  <strong>Number of Pages:</strong>
+  <%= book.number_of_pages %>
+</p>
+
+<p>
+  <%= image_tag book.image_url, size:"200x300" %>
+</p>
+
+<% end %>
